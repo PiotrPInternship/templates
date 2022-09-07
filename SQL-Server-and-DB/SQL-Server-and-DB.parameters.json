@@ -1,0 +1,25 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "serverName": {
+        "value": "ppaszek123-server"
+      },
+      "administratorLogin": {
+        "reference": {
+            "keyVault": {
+                "id": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/mykeyvaultdeploymentrg/providers/Microsoft.KeyVault/vaults/sql-login1"
+            },
+            "secretName": "sql-username"
+        }
+      },
+      "administratorLoginPassword": {
+        "reference": {
+            "keyVault": {
+                "id": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/mykeyvaultdeploymentrg/providers/Microsoft.KeyVault/vaults/sql-login1"
+            },
+            "secretName": "AzureSqlDBSecret"
+        }
+      }
+    }
+  }

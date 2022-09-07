@@ -1,0 +1,5 @@
+git init -b main
+git add .
+git commit -m "First commit"
+git remote add origin "https://github.com/PiotrPInternship/templates.git"
+git push origin main

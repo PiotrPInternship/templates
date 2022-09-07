@@ -1,0 +1,1 @@
+New-AzResourceGroupDeployment -ResourceGroupName script-test -TemplateFile ./app-service2.json

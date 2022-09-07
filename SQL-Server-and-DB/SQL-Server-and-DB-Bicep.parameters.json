@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "administratorLogin": {
+      "reference": {
+        "keyVault": {
+            "id": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/mykeyvaultdeploymentrg/providers/Microsoft.KeyVault/vaults/sql-login1"
+        },
+        "secretName": "sql-username"
+    }
+    },
+    "administratorLoginPassword": {
+      "reference": {
+        "keyVault": {
+            "id": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/mykeyvaultdeploymentrg/providers/Microsoft.KeyVault/vaults/sql-login1"
+        },
+        "secretName": "sql-password"
+    }
+    }
+  }
+}

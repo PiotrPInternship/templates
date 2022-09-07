@@ -1,0 +1,1 @@
+az network nsg list --resource-group script-tes-us

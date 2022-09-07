@@ -1,0 +1,5 @@
+az deployment group create \
+  --name storageaccount1 \
+  --resource-group script-test \
+  --template-file .\app-service2.json \
+  --parameters .\app-service2.json
