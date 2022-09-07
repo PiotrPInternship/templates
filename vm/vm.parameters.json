@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "newStorageAccountName": {
+        "value": "vm1sappaszek"
+      },
+      "publicIPName": {
+        "value": "vm1-public-IP"
+      },
+      "vmName": {
+        "value": "vm1"
+      },
+      "adminUsername": {
+        "value": "ppaszek"
+      },
+      "virtualNetworkName": {
+        "value": "VNet1"
+      },
+      "virtualNetworkResourceGroup": {
+        "value": "script-tes-us"
+      },
+      "subnet1Name": {
+        "value": "firstSubnet"
+      },
+      "nicName": {
+        "value": "vm1-interface"
+      },
+      "imageSKU": {
+        "value": "18.04-LTS"
+      },
+      "adminPasswordOrKey": {
+        "value": "GEN-SSH-PUB-KEY"
+      }
+    }
+  }
