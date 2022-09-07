@@ -11,6 +11,15 @@
       "vmName": {
         "value": "vm1"
       },
+      "vmSize": {
+        "value": "Standard_DS1_v2"
+      },
+      "imagePublisher":{
+        "value": "Canonical"
+      },
+      "imageOffer":{
+        "value": "UbuntuServer"
+      },
       "adminUsername": {
         "value": "ppaszek"
       },
