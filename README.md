@@ -1,0 +1,1 @@
+This repo include basic templates created in ARM, Bicep and Terraform which I created in process of learning this technologies. This templates are basic but functional to create basic resources.
