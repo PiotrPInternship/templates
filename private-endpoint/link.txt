@@ -1,0 +1,1 @@
+https://www.c-sharpcorner.com/article/how-to-secure-our-azure-web-app-services-using-a-private-endpoints/
