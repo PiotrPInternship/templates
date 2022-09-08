@@ -16,9 +16,9 @@
       "administratorLoginPassword": {
         "reference": {
             "keyVault": {
-                "id": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/mykeyvaultdeploymentrg/providers/Microsoft.KeyVault/vaults/sql-login1"
+                "id": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/mykeyvaultdeploymentrg/providers/Microsoft.KeyVault/vaults/test2-ppaszek"
             },
-            "secretName": "AzureSqlDBSecret"
+            "secretName": "test"
         }
       }
     }

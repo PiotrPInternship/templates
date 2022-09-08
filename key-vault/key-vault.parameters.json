@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "keyVaultName": {
+        "value": "test321323-ppaszek"
+      },
+      "location": {
+        "value": "[resourceGroup().location]"
+      },
+      "enabledForDeployment": {
+        "value": null
+      },
+      "enabledForDiskEncryption": {
+        "value": null
+      },
+      "enabledForTemplateDeployment": {
+        "value": true
+      },
+      "tenantId": {
+        "value": "[subscription().tenantId]"
+      },
+      "objectId": {
+        "value": "cfa8b339-82a2-471a-a3c9-0fc0be7a4093"
+      },
+      "keysPermissions": {
+        "value": [
+          "list"
+        ]
+      },
+      "secretsPermissions": {
+        "value": [
+          "all"
+        ]
+      },
+      "skuName": {
+        "value": "standard"
+      },
+      "secretName": {
+        "value": "test3123"
+      },
+      "secretValue": {
+        "value": "sAdfdczx234%%"
+      }
+    }
+  }
