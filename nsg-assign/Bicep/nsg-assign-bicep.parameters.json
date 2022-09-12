@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "virtualNetworkName": {
-      "value": ""
+      "value": "vnet-ppaszek"
     },
     "subnetName": {
-      "value": ""
+      "value": "fronend"
     },
     "subnetAddressPrefix": {
-      "value": ""
+      "value": "10.0.0.0/24"
     },
     "nsgId": {
-      "value": ""
+      "value": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/script-tes-us/providers/Microsoft.Network/networkSecurityGroups/nsg-ppaszek"
     }
   }
 }
