@@ -18,7 +18,7 @@
     },
     "sqlDBName": {
       "type": "string",
-      "defaultValue": "SampleDB",
+      "defaultValue": "ppaszek-db123",
       "metadata": {
         "description": "The name of the SQL Database."
       }
@@ -37,7 +37,7 @@
       }
     },
     "administratorLoginPassword": {
-      "type": "secureString",
+      "type": "string",
       "metadata": {
         "description": "The administrator password of the SQL logical server."
       }

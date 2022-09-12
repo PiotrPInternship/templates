@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "webAppName": {
+        "value": "ppaszek-webapp"
+      },
+      "storageAccountUrl": {
+        "value": "https://ppaszeklchhmlccshy76.blob.core.windows.net/test?sp=r&st=2022-09-12T08:19:39Z&se=2022-09-12T16:19:39Z&spr=https&sv=2021-06-08&sr=c&sig=swojbWy%2B93K2%2BuJlVIViRSU5H4YGayWYxTP5IJZy1LQ%3D"
+      },
+      "backupSchedule": {
+        "value": {
+          "frequencyInterval": 1,
+          "frequencyUnit": "Day",
+          "keepAtLeastOneBackup": true,
+          "retentionPeriodInDays": 10,
+          "startTime": "31.08.2022"
+        }
+      }
+    }
+  }

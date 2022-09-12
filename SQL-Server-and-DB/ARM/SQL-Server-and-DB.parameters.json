@@ -6,20 +6,10 @@
         "value": "ppaszek123-server"
       },
       "administratorLogin": {
-        "reference": {
-            "keyVault": {
-                "id": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/mykeyvaultdeploymentrg/providers/Microsoft.KeyVault/vaults/sql-login1"
-            },
-            "secretName": "sql-username"
-        }
+        "value": "ppaszek1234"
       },
       "administratorLoginPassword": {
-        "reference": {
-            "keyVault": {
-                "id": "/subscriptions/06c54ca3-cc90-4a21-93dd-6de69f5ac7ef/resourceGroups/mykeyvaultdeploymentrg/providers/Microsoft.KeyVault/vaults/test2-ppaszek"
-            },
-            "secretName": "test"
-        }
+        "value": "SDF#$@&hjk"
       }
     }
   }

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.10.13.619",
+      "templateHash": "17742671198820673123"
+    }
+  },
+  "parameters": {
+    "webAppName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of web app"
+      }
+    },
+    "storageAccountUrl": {
+      "type": "string",
+      "metadata": {
+        "description": "SAS URL to the container."
+      }
+    },
+    "backupSchedule": {
+      "type": "object",
+      "metadata": {
+        "description": "Schedule for the backup"
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Web/sites/config",
+      "apiVersion": "2022-03-01",
+      "name": "[format('{0}/{1}', parameters('webAppName'), 'backup')]",
+      "kind": "backup",
+      "properties": {
+        "backupName": "backup-ppaszek",
+        "backupSchedule": {
+          "frequencyInterval": "[parameters('backupSchedule').frequencyInterval]",
+          "frequencyUnit": "[parameters('backupSchedule').frequencyUnit]",
+          "keepAtLeastOneBackup": "[parameters('backupSchedule').keepAtLeastOneBackup]",
+          "retentionPeriodInDays": "[parameters('backupSchedule').retentionPeriodInDays]",
+          "startTime": "[parameters('backupSchedule').startTime]"
+        },
+        "databases": [
+          {
+            "connectionString": "Server=tcp:ppaszek123-server.database.windows.net,1433;Initial Catalog=SampleDB;Persist Security Info=False;User ID=ppaszek1234;Password=SDF#$@&hjk;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+            "connectionStringName": "connection123",
+            "databaseType": "SqlAzure",
+            "name": "ppaszek123-server"
+          }
+        ],
+        "enabled": true,
+        "storageAccountUrl": "[parameters('storageAccountUrl')]"
+      }
+    }
+  ]
+}
