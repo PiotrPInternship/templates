@@ -122,10 +122,10 @@
           "name": "Standard",
           "tier": "Standard"
         }
-        // "dependsOn": [
-        //   "[resourceId('Microsoft.Sql/servers', variables('sqlServerName'))]"
-        // ]
-        // ??????????
+        "dependsOn": [
+          "[resourceId('Microsoft.Sql/servers', variables('sqlServerName'))]"
+        ]
+        //??????????
       }
     ],
     "outputs": {
