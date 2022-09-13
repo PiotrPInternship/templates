@@ -1,0 +1,40 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "virtualNetworkName": {
+        "value": "virtualNetwork1"
+      },
+      "subnetName": {
+        "value": "subnet2"
+      },
+      "applicationGatewayName": {
+        "value": "gateway-test01"
+      },
+      "applicationGatewaySize": {
+        "value": "Standard_Small"
+      },
+      "applicationGatewayInstanceCount": {
+        "value": 1
+      },
+      "frontendPort": {
+        "value": 6660
+      },
+      "backendPort": {
+        "value": 6661
+      },
+      "backendIPAddresses": {
+        "value": [
+          {
+            "IpAddress": "10.0.0.99"
+          },
+          {
+            "IpAddress": "10.0.0.100"
+          }
+        ]
+      },
+      "cookieBasedAffinity": {
+        "value": "Disabled"
+      }
+    }
+  }
