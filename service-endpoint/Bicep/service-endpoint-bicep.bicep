@@ -10,6 +10,7 @@ resource subnet 'Microsoft.Network/virtualNetworks/subnets@2022-01-01' existing 
 module vnet_integration 'service-endpoint-subnate-update.bicep' = {
   name: 'update-vnet-subnet-${vnetName}-${subnetName}'
   params: {
+    vnetName: vnetName
     subnetName: subnetName
     properties: union(subnet.properties, {
         serviceEndpoints: [
