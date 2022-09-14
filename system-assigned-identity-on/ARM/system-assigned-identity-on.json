@@ -1,37 +1,71 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
-  
-    "parameters": {
-      "location": {
-        "type": "string",
-        "defaultValue": "[resourceGroup().location]",
-        "metadata": {
-          "description": "Location for all resources."
-        }
-      },
-      "webAppName": {
-        "type": "string",
-        "metadata": {
-          "description": "Name of web app"
-        }
-      }
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.9.1.41621",
+      "templateHash": "9552398324550201588"
+    }
+  },
+  "parameters": {
+    "webAppName": {
+      "type": "string"
     },
-    "resources": [
-      {
-        "type": "Microsoft.Web/sites",
-        "apiVersion": "2021-01-01",
-        "name": "[parameters('webAppName')]",
-        "location": "[parameters('location')]",
-        "kind": "functionapp,workflowapp",
-          "identity": {
-          "type": "SystemAssigned"
-        },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2020-10-01",
+      "name": "[format('app_managed_identity-{0}', parameters('webAppName'))]",
       "properties": {
-          "siteConfig": {
-            "appSettings": []
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "webAppName": {
+            "value": "[parameters('webAppName')]"
           }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "parameters": {
+            "webAppName": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of webapp"
+              }
+            },
+            "location": {
+              "type": "string",
+              "metadata": {
+                "description": "location of webapp"
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Web/sites",
+              "apiVersion": "2021-01-01",
+              "name": "[parameters('webAppName')]",
+              "kind": "functionapp,workflowapp",
+              "identity": {
+              "type": "SystemAssigned"
+              },
+              "location": "[parameters('location')]"
+            }
+          ]
         }
       }
-    ]
-  }
+    }
+  ]
+}
