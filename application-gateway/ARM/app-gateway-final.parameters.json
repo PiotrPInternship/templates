@@ -1,15 +1,155 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-      "existingVnetName": {
-        "value": "GET-PREREQ-existingVnetName"
-      },
-      "existingVnetResourceGroup": {
-        "value": "GET-PREREQ-existingVnetResourceGroup"
-      },
-      "existingSubnetName": {
-        "value": "GET-PREREQ-existingSubnetName"
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "applicationGatewayName": {
+      "value": "appGw01"
+    },
+    "location": {
+      "value": "[resourceGroup().location]"
+    },
+    "tier": {
+      "value": "WAF_v2"
+    },
+    "sku": {
+      "value": "WAF_v2"
+    },
+    "http2Enabled": {
+      "value": true
+    },
+    "capacity": {
+      "value": 2
+    },
+    "autoScaleMaxCapacity": {
+      "value": 10
+    },
+    "publicIpAddressName": {
+      "value": "appGwpublicIp"
+    },
+    "vNetSubscriptionId": {
+      "value": "[subscription().subscriptionId]"
+    },
+    "existingVnetResourceGroup": {
+      "value": null
+    },
+    "existingVnetName": {
+      "value": null
+    },
+    "existingSubnetName": {
+      "value": null
+    },
+    "sslCertificates": {
+      "value": []
+    },
+    "trustedRootCertificates": {
+      "value": []
+    },
+    "httpListeners": {
+      "value": [
+        {
+          "name": "HttpListener01",
+          "protocol": "Http",
+          "frontEndPort": "port_80",
+          "firewallPolicy": "Enabled"
+        }
+      ]
+    },
+    "backendAddressPools": {
+      "value": [
+        {
+          "name": "BackendPool01",
+          "backendAddresses": [
+            {
+              "ipAddress": "10.1.2.3"
+            }
+          ]
+        }
+      ]
+    },
+    "backendHttpSettings": {
+      "value": [
+        {
+          "name": "BackendHttpSetting01",
+          "port": 80,
+          "protocol": "Http",
+          "cookieBasedAffinity": "Enabled",
+          "affinityCookieName": "CookieAffinity01",
+          "requestTimeout": 300,
+          "connectionDraining": {
+            "drainTimeoutInSec": 60,
+            "enabled": true
+          }
+        }
+      ]
+    },
+    "rules": {
+      "value": [
+        {
+          "name": "Rule01",
+          "ruleType": "Basic",
+          "listener": "HttpListener01",
+          "backendPool": "BackendPool01",
+          "backendHttpSettings": "BackendHttpSetting01"
+        }
+      ]
+    },
+    "redirectConfigurations": {
+      "value": []
+    },
+    "frontEndPorts": {
+      "value": [
+        {
+          "name": "port_80",
+          "port": 80
+        }
+      ]
+    },
+    "customProbes": {
+      "value": []
+    },
+    "managedIdentityResourceId": {
+      "value": null
+    },
+    "enableWebApplicationFirewall": {
+      "value": true
+    },
+    "firewallPolicyName": {
+      "value": "FirewallPolicy01"
+    },
+    "firewallPolicySettings": {
+      "value": {
+        "requestBodyCheck": true,
+        "maxRequestBodySizeInKb": 128,
+        "fileUploadLimitInMb": 100,
+        "state": "Enabled",
+        "mode": "Detection"
       }
+    },
+    "firewallPolicyCustomRules": {
+      "value": []
+    },
+    "firewallPolicyManagedRuleSets": {
+      "value": [
+        {
+          "ruleSetType": "OWASP",
+          "ruleSetVersion": "3.2"
+        }
+      ]
+    },
+    "firewallPolicyManagedRuleExclusions": {
+      "value": []
+    },
+    "enableDeleteLock": {
+      "value": null
+    },
+    "enableDiagnostics": {
+      "value": null
+    },
+    "diagnosticStorageAccountId": {
+      "value": null
+    },
+    "logAnalyticsWorkspaceId": {
+      "value": null
     }
   }
+}

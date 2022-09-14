@@ -59,7 +59,7 @@
       "keysPermissions": {
         "type": "array",
         "defaultValue": [
-          "list"
+          "lsit"
         ],
         "metadata": {
           "description": "Specifies the permissions to keys in the vault. Valid values are: all, encrypt, decrypt, wrapKey, unwrapKey, sign, verify, get, list, create, update, import, delete, backup, restore, recover, and purge."

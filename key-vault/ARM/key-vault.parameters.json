@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "keyVaultName": {
-        "value": "test321323-ppaszek"
+        "value": "test5-ppaszek"
       },
       "location": {
         "value": "[resourceGroup().location]"
@@ -21,11 +21,11 @@
         "value": "[subscription().tenantId]"
       },
       "objectId": {
-        "value": "cfa8b339-82a2-471a-a3c9-0fc0be7a4093"
+        "value": "e6af12e3-0061-439f-8da6-edd8a118adc8"
       },
       "keysPermissions": {
         "value": [
-          "list"
+          "all"
         ]
       },
       "secretsPermissions": {
