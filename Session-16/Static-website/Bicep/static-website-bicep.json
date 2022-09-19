@@ -21,7 +21,7 @@
     },
     "scripts_repo_path": {
       "type": "string",
-      "defaultValue": "https://github.com/PiotrPInternship/templates/tree/master/Session-16/Static-website"
+      "defaultValue": "https://github.com/PiotrPInternship/templates"
     },
     "scripts_repo_branch": {
       "type": "string",
