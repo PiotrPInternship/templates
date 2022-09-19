@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "storage_name": {
-      "value": ""
+      "value": "ppaszek123"
     },
     "storage_sku": {
-      "value": ""
+      "value": "Standard_LRS"
     },
     "identity_name": {
-      "value": ""
+      "value": "ppaszek-uaid"
     }
   }
 }
