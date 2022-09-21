@@ -9,7 +9,7 @@ echo "Static websites ON"
 #     --verbose \
 #     -o table
 az storage blob service-properties update \
---account-name "ppaszek123" \
---static-website \
---404-document "error.html"\
---index-document "index.html"
+--account-name ppaszek123 \
+--static-website true \
+--404-document error.html\
+--index-document index.html
