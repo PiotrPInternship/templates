@@ -1,0 +1,18 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "appName": {
+        "value": "ppaszek12389"
+      },
+      "appInsightsResource": {
+        "value": "/subscriptions/f37554b3-4021-4a23-ab51-111c0c484417/resourceGroups/Cap.Piotr-Paszek/providers/microsoft.insights/components/ppaszek12389"
+      },
+      "pingURL": {
+        "value": "https://www.microsoft.com"
+      },
+      "webtestLocations": {
+        "value": "us-va-ash-azr"
+      }
+    }
+  }
