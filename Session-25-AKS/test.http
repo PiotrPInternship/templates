@@ -1,0 +1,5 @@
+@HOSTNAME = 20.124.162.91
+@PORT = 8080
+@Host = {{HOSTNAME}}:{{PORT}}
+
+GET http://{{Host}}/api/car/all
