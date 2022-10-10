@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: piotrpaszekacr2022.azurecr.io/dotnet:latest
+        image: piotrpaszekacr2022.azurecr.io/catalog-api:latest
         ports:
         - containerPort: 3000
         livenessProbe:
