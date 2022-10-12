@@ -17,9 +17,3 @@ spec:
         image: piotrpaszekacr2022.azurecr.io/catalog-api:latest
         ports:
         - containerPort: 3000
-        livenessProbe:
-          httpGet:
-            path: /healts/ping
-            port: 3000
-          initialDelaySeconds: 3
-          periodSeconds: 3
